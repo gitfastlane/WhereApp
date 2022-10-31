@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c9ffc9"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    tools:context=".AddChild">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="우리아이 추가를 위해"
+                android:textAlignment="center"
+                android:textColor="#01010A"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="우리아이 아이디를 입력하세요!"
+                android:textAlignment="center"
+                android:textColor="#01010A"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_id_search"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="아이디"
+                android:textColor="#01010A"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/childIdTxt"
+                style="@style/Widget.AppCompat.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="검색할 아이디"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:textColor="#292929"
+                android:textColorHint="#cccccc"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/searchBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dark_button_small"
+                android:text="검색"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:viewportWidth="60"
+                android:viewportHeight="16" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/under_line_dark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/outLayout"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/pop_up"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="검색된 아이디"
+                android:textAlignment="center"
+                android:textColor="#01010A"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/id_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:alpha="0.7"
+                android:background="@drawable/gray_bg"
+                android:baselineAligned="false"
+                android:elevation="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_id_search_result2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="아이디"
+                    android:textColor="#01010A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/outIdTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="9"
+                    android:inputType="textPersonName"
+                    android:textColor="#292929"
+                    android:textColorHint="#473D33"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/label_id_search_result"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="이름"
+                    android:textColor="#01010A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/outNameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:ems="5"
+                    android:inputType="textPersonName"
+                    android:textColor="#292929"
+                    android:textColorHint="#473D33"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/updateBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/green_button"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:text="추가"
+                    android:textColor="#01010A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/homeBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_button_big"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:text="취소"
+                    android:textColor="#01010A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
